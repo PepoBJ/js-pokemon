@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Articulo Pokemon</title>
+	<style>
+		.info {
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 1.5em;
+			background: steelblue;
+			padding: .5em;
+			text-align: center;
+			color: #FFF;
+			border-radius: 5px;
+		}
+		h2 {
+			text-transform: uppercase;
+			border-bottom: 1px solid #FFF;
+			line-height: 2;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="info">
+		<h2> Esta aplicación corre en la consola </h2>
+		<h3> Chrome: Click derecho > Inspeccionar > seleccionar pestaña "Console"</h3>
+	</div>
+
+	<script src="pokemon.js"></script>
+	<script src="entrenador.js"></script>
+	<script>				
+		p_pikachu  = new Pokemon("PIKACHU", 100, true, 15, 1);
+		p_squirtle = new Pokemon("SQUIRTLE", 100, true, 10, 1);
+		p_pidge    = new Pokemon("PIDGE", 100, true, 10, 1);
+
+		ash        = new Entrenador( "ASH", [ p_pikachu ] );
+		gary       = new Entrenador( "GARY", [ p_squirtle, p_pidge ] );
+
+		ash.retarAEntrenador( gary );
+	</script>
+</body>
+</html>
